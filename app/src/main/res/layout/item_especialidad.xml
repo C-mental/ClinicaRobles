@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgEspecialidad"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_medicina_general"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="Icono especialidad" />
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Especialidad"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            app:layout_constraintStart_toEndOf="@id/imgEspecialidad"
+            app:layout_constraintTop_toTopOf="@id/imgEspecialidad"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/tvDoctor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Dr. Nombre"
+            android:textColor="#444"
+            app:layout_constraintStart_toStartOf="@id/tvNombre"
+            app:layout_constraintTop_toBottomOf="@id/tvNombre"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHorario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Lunes a Viernes"
+            android:textColor="#777"
+            app:layout_constraintStart_toStartOf="@id/tvDoctor"
+            app:layout_constraintTop_toBottomOf="@id/tvDoctor"
+            app:layout_constraintBottom_toBottomOf="@id/imgEspecialidad"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
